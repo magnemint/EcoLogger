@@ -1,4 +1,4 @@
-# Eco Logger by Magnemint (マグネミント#3659)
+# Eco Logger 0.3.0 by Magnemint (マグネミント#3659)
 
 ## Description
 
@@ -41,6 +41,16 @@ logger.logError(enumOfChoice, string);
 
 (Obviously, replacing `enumOfChoice` and `string` with your desired value.
 
+You can also customise things like the name of the project, and the
+two colours that style the text in the console like so:
+
+```java
+logger.clientName = "Johnny";
+logger.infoColour1 = "\u001B[30m";
+logger.infoColour2 = "\u001B[35m";
+// Info colour 1 & 2 will become easier to style rather than using ANSI codes soon.
+```
+
 Example Class:
 
 ```java
@@ -50,10 +60,25 @@ public class Main {
 
 	public static void main(String[] args)
 	{
+		logger.clientName = "Super Cool Java Project!";
+		logger.infoColour1 = "\u001B[36m";
+		logger.infoColour2 = "\u001B[32m";
+		
+		/* By leaving the above out, they will be switched to their default values of:
+		 * "Client Name Goes Here",
+		 * Cyan
+		 * Green
+		 */
+		
 		logger.log(LoggerCasualEnum.ProjectInfo, "Project Booted");
 	}
 }
 
 ```
+
+Example Class Output:
+
+`[36m[Super Cool Java Project!][32m [2023-04-18T11:52:48.223106300Z] [36m[Other Info] [32mProject Booted[0m
+`
 
 That's it! :) Please star this repo if you use it, I would appreciate it.
