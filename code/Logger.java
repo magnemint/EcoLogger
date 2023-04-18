@@ -8,6 +8,10 @@ import your.directory.here.enums.LoggerWarningEnum;
 
 public class ClientLogger {
 	
+	/*
+	 * @author: magnemint
+	*/
+	
 	//Create a callable instance of the Logger
 	private static final ClientLogger LOGGER = new ClientLogger();
 	public static final ClientLogger getLogger() { return LOGGER; }
