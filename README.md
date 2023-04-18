@@ -11,7 +11,7 @@ To call the `Logger.java` class, you need to make a new instance of it. To do th
 the top of the class you want to use the logger in.
 
 ```java
-private Logger logger = Logger.getLogger();
+private EcoLogManager logger = EcoLogManager.getLogger();
 // can be public if you want, I don't advise it though.
 ```
 
