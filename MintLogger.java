@@ -1,23 +1,23 @@
-package mint.util.console;
+package your.directory.here;
 
 import java.time.Clock;
 import java.time.Instant;
 
-import mint.util.console.enums.MintLoggerCasualEnum;
-import mint.util.console.enums.MintLoggerWarningEnum;
+import your.directory.here.enums.LoggerCasualEnum;
+import your.directory.here.enums.LoggerWarningEnum;
 
-public class MintLogger {
+public class ClientLogger {
 	
 	//Create a callable instance of the Logger
-	private static final MintLogger LOGGER = new MintLogger();
-	public static final MintLogger getLogger() { return LOGGER; }
+	private static final ClientLogger LOGGER = new ClientLogger();
+	public static final ClientLogger getLogger() { return LOGGER; }
 	
 	//Client Name
-	private String clientName = "Mint";
+	private String clientName = "Client Name Goes Here";
 	
 	//Get Enum Type
-	private MintLoggerCasualEnum casualEnum;
-	private MintLoggerWarningEnum errorEnum;
+	private LoggerCasualEnum casualEnum;
+	private LoggerWarningEnum errorEnum;
 	private String consoleTypeAsString;
 	private String errorTypeAsString;
 	
