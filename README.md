@@ -41,4 +41,19 @@ logger.logError(enumOfChoice, string);
 
 (Obviously, replacing `enumOfChoice` and `string` with your desired value.
 
+Example Class:
+
+```java
+public class Main {
+	
+	private static final LogManager logger = LogManager.getLogger();
+
+	public static void main(String[] args)
+	{
+		logger.log(LoggerCasualEnum.ProjectInfo, "Project Booted");
+	}
+}
+
+```
+
 That's it! :) Please star this repo if you use it, I would appreciate it.
