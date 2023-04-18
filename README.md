@@ -39,7 +39,7 @@ and
 logger.logError(enumOfChoice, string);
 ```
 
-(Obviously, replacing `enumOfChoice` and `string` with your desired value.
+(Obviously, replacing `enumOfChoice` and `string` with your desired value.)
 
 You can also customise things like the name of the project, and the
 two colours that style the text in the console like so:
