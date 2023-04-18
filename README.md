@@ -70,7 +70,7 @@ public class Main {
 		 * Green
 		 */
 		
-		logger.log(LoggerCasualEnum.ProjectInfo, "Project Booted");
+		logger.log(LoggerCasualEnum.Other, "Project Booted");
 	}
 }
 
@@ -78,7 +78,6 @@ public class Main {
 
 Example Class Output:
 
-`[36m[Super Cool Java Project!][32m [2023-04-18T11:52:48.223106300Z] [36m[Other Info] [32mProject Booted[0m
-`
+`[Super Cool Java Project!] [32m [2023-04-18T11:52:48.223106300Z] [Other Info] Project Booted`
 
 That's it! :) Please star this repo if you use it, I would appreciate it.
