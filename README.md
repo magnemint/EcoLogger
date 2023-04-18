@@ -1,4 +1,4 @@
-# Custom Logger by Magnemint (マグネミント#3659)
+# Eco Logger by Magnemint (マグネミント#3659)
 
 ## Description
 
