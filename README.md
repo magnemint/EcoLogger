@@ -92,6 +92,7 @@ public class Main {
 Example Class Output:
 
 `[Super Cool Java Project!] [Tue Apr 18 21:37:15 AWST 2023] [Other Info] Project Booted`
+
 `[Super Cool Java Project!] [Tue Apr 18 21:37:16 AWST 2023] [Project Warning] Cannot access face`
 
 Accepted Colours (ANSI Colour Code):
