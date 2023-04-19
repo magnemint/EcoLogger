@@ -1,4 +1,4 @@
-# Eco Logger 0.3.5 by Magnemint (マグネミント#3659)
+# Eco Logger 0.7 by Magnemint (マグネミント#3659)
 
 ## Description
 
@@ -37,6 +37,9 @@ and
 
 ```java
 logger.logError(enumOfChoice, string);
+/* When using `logger.logError()`, use the LoggerWarningEnum; otherwise
+ * it will log is as `Unassigned`. Read line 111 for more
+ */
 ```
 
 (Obviously, replacing `enumOfChoice` and `string` with your desired value.)
@@ -45,10 +48,11 @@ You can also customise things like the name of the project, and the
 two colours that style the text in the console like so:
 
 ```java
-logger.clientName = "Johnny";
-logger.infoColour1 = "\u001B[30m";
-logger.infoColour2 = "\u001B[35m";
-// Info colour 1 & 2 will become easier to style rather than using ANSI codes soon.
+logger.clientName = "Johnny"; // Project name usually goes here
+logger.infoColour1 = "Cyan"; // First colour in info log
+logger.infoColour2 = "Blue"; // Second colour in info log
+logger.mildWarningColour = "Yellow"; // Warning colour
+logger.importantWarningColour = "Red"; // Error/Failure colour
 ```
 
 Example Class:
@@ -61,16 +65,25 @@ public class Main {
 	public static void main(String[] args)
 	{
 		logger.clientName = "Super Cool Java Project!";
-		logger.infoColour1 = "\u001B[36m";
-		logger.infoColour2 = "\u001B[32m";
+		
+		// logger.log()
+		logger.infoColour1 = "Green";
+		logger.infoColour2 = "Purple";
+		
+		// logger.logError()
+		logger.mildWarningColour = "Yellow";
+		logger.importantWarningColour = "Red";		
 		
 		/* By leaving the above out, they will be switched to their default values of:
 		 * "Client Name Goes Here",
 		 * Cyan
 		 * Green
+		 * Yellow
+		 * Red
 		 */
 		
 		logger.log(LoggerCasualEnum.Other, "Project Booted");
+		logger.logError(LoggerWarningEnum.ProjectWarning, "Cannot access face");
 	}
 }
 
@@ -79,5 +92,26 @@ public class Main {
 Example Class Output:
 
 `[Super Cool Java Project!] [Tue Apr 18 21:37:15 AWST 2023] [Other Info] Project Booted`
+`[Super Cool Java Project!] [Tue Apr 18 21:37:16 AWST 2023] [Project Warning] Cannot access face`
+
+Accepted Colours (ANSI Colour Code):
+
+```
+Reset (\u001B[0m)
+Black (\u001B[30m)
+Red (\u001B[31m)
+Green (\u001B[32m)
+Yellow (\u001B[33m")
+Blue (\u001B[34m)
+Purple (\u001B[35m)
+Cyan (\u001B[36m)
+White (\u001B[37m)
+```
+
+Note with `logger.logError()`. 
+
+By default, `LoggerWarningEnum.ProjectError` will log the statement under the
+`importantWarningColour`, and `LoggerWarningEnum.ProjectWarning` is the only field
+that logs the statemenet as a warning, or under the `mildWarningColour`.
 
 That's it! :) Please star this repo if you use it, I would appreciate it.
