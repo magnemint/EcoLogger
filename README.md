@@ -1,4 +1,4 @@
-# Eco Logger 0.3.0 by Magnemint (マグネミント#3659)
+# Eco Logger 0.3.5 by Magnemint (マグネミント#3659)
 
 ## Description
 
@@ -78,6 +78,6 @@ public class Main {
 
 Example Class Output:
 
-`[Super Cool Java Project!] [2023-04-18T11:52:48.223106300Z] [Other Info] Project Booted`
+`[Super Cool Java Project!] [Tue Apr 18 21:37:15 AWST 2023] [Other Info] Project Booted`
 
 That's it! :) Please star this repo if you use it, I would appreciate it.
