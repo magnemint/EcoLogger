@@ -28,12 +28,11 @@ public class EcoLogManager {
 	public String clientName = "Project Name";
 	public String infoColour1 = "Cyan";
 	public String infoColour2 = "Green";
-	public String mildWarningColour = "Red";
-	public String importantWarningColour = "Yellow"; 
+	public String mildWarningColour = "Yellow";
+	public String importantWarningColour = "Red"; 
 	
 	//Other Random Boolean
 	private Boolean useMildColour = false;
-	private Boolean exceptionRecievedWhenSavingToFile = false;
 	
 	//Get Enum Type
 	private String consoleTypeAsString;
@@ -75,6 +74,10 @@ public class EcoLogManager {
 		{
 			consoleTypeAsString = "Other Info";
 		} 
+		else if (consoleType == LoggerCasualEnum.EcoLogger)
+		{
+			consoleTypeAsString = "Eco Logger Info";
+		}
 		else 
 		{
 			consoleTypeAsString = "Unasssigned";
@@ -139,12 +142,12 @@ public class EcoLogManager {
 		else if (errorType == LoggerWarningEnum.ProjectWarning)
 		{
 			errorTypeAsString = "Project Warning";
-			useMildColour = false;
+			useMildColour = true;
 		}
 		else if (errorType == LoggerWarningEnum.Other)
 		{
 			errorTypeAsString = "Other Issue";
-			useMildColour = true;
+			useMildColour = false;
 		}
 		else 
 		{
@@ -180,177 +183,161 @@ public class EcoLogManager {
 	private void checkCustomisations()
 	{
 		//Sets the strings to lower case to check
-		String if1 = infoColour1.toLowerCase();
-		String if2 = infoColour2.toLowerCase();
-		String mwc = mildWarningColour.toLowerCase();
-		String iwc = importantWarningColour.toLowerCase();
+		infoColour1 = infoColour1.toLowerCase();
+		infoColour2 = infoColour2.toLowerCase();
+		mildWarningColour = mildWarningColour.toLowerCase();
+		importantWarningColour = importantWarningColour.toLowerCase();
 		
 		//Checks infoColour1 field
-		if (if1.equals("none"))
+		if (infoColour1.equals("none"))
 		{
 			infoColour1 = ANSI_RESET;
 		}
-		else if (if1.equals("black"))
+		else if (infoColour1.equals("black"))
 		{
 			infoColour1 = ANSI_BLACK;
 		}
-		else if (if1.equals("red"))
+		else if (infoColour1.equals("red"))
 		{
 			infoColour1 = ANSI_RED;
 		}
-		else if (if1.equals("green"))
+		else if (infoColour1.equals("green"))
 		{
 			infoColour1 = ANSI_GREEN;
 		}
-		else if (if1.equals("yellow")) 
+		else if (infoColour1.equals("yellow")) 
 		{
 			infoColour1 = ANSI_YELLOW;
 		}
-		else if (if1.equals("blue"))
+		else if (infoColour1.equals("blue"))
 		{
 			infoColour1 = ANSI_BLUE;
 		}
-		else if (if1.equals("purple"))
+		else if (infoColour1.equals("purple"))
 		{
 			infoColour1 = ANSI_PURPLE;
 		}
-		else if (if1.equals("cyan"))
+		else if (infoColour1.equals("cyan"))
 		{
 			infoColour1 = ANSI_CYAN;
 		}
-		else if (if1.equals("white"))
+		else if (infoColour1.equals("white"))
 		{
 			infoColour1 = ANSI_WHITE;
 		}
-		else 
-		{
-			infoColour1 = ANSI_CYAN;
-		}
 		
 		//Checks infoColour2 field
-		if (if2.equals("none"))
+		if (infoColour2.equals("none"))
 		{
 			infoColour2 = ANSI_RESET;
 		}
-		else if (if2.equals("black"))
+		else if (infoColour2.equals("black"))
 		{
 			infoColour2 = ANSI_BLACK;
 		}
-		else if (if2.equals("red"))
+		else if (infoColour2.equals("red"))
 		{
 			infoColour2 = ANSI_RED;
 		}
-		else if (if2.equals("green"))
+		else if (infoColour2.equals("green"))
 		{
 			infoColour2 = ANSI_GREEN;
 		}
-		else if (if2.equals("yellow")) 
+		else if (infoColour2.equals("yellow")) 
 		{
 			infoColour2 = ANSI_YELLOW;
 		}
-		else if (if2.equals("blue"))
+		else if (infoColour2.equals("blue"))
 		{
 			infoColour2 = ANSI_BLUE;
 		}
-		else if (if2.equals("purple"))
+		else if (infoColour2.equals("purple"))
 		{
 			infoColour2 = ANSI_PURPLE;
 		}
-		else if (if2.equals("cyan"))
+		else if (infoColour2.equals("cyan"))
 		{
 			infoColour2 = ANSI_CYAN;
 		}
-		else if (if2.equals("white"))
+		else if (infoColour2.equals("white"))
 		{
 			infoColour2 = ANSI_WHITE;
 		}
-		else 
-		{
-			infoColour2 = ANSI_GREEN;
-		}
 		
 		//Checks mildWarningColour field
-		if (mwc.equals("none"))
+		if (mildWarningColour.equals("none"))
 		{
 			mildWarningColour = ANSI_RESET;
 		}
-		else if (mwc.equals("black"))
+		else if (mildWarningColour.equals("black"))
 		{
 			mildWarningColour = ANSI_BLACK;
 		}
-		else if (mwc.equals("red"))
+		else if (mildWarningColour.equals("red"))
 		{
 			mildWarningColour = ANSI_RED;
 		}
-		else if (mwc.equals("green"))
+		else if (mildWarningColour.equals("green"))
 		{
 			mildWarningColour = ANSI_GREEN;
 		}
-		else if (mwc.equals("yellow")) 
+		else if (mildWarningColour.equals("yellow")) 
 		{
 			mildWarningColour = ANSI_YELLOW;
 		}
-		else if (mwc.equals("blue"))
+		else if (mildWarningColour.equals("blue"))
 		{
 			mildWarningColour = ANSI_BLUE;
 		}
-		else if (mwc.equals("purple"))
+		else if (mildWarningColour.equals("purple"))
 		{
 			mildWarningColour = ANSI_PURPLE;
 		}
-		else if (mwc.equals("cyan"))
+		else if (mildWarningColour.equals("cyan"))
 		{
 			mildWarningColour = ANSI_CYAN;
 		}
-		else if (mwc.equals("white"))
+		else if (mildWarningColour.equals("white"))
 		{
 			mildWarningColour = ANSI_WHITE;
 		}
-		else 
-		{
-			mildWarningColour = ANSI_YELLOW;
-		}
 		
 		//Checks importantWarningColour field
-		if (iwc.equals("none"))
+		if (importantWarningColour.equals("none"))
 		{
 			importantWarningColour = ANSI_RESET;
 		}
-		else if (iwc.equals("black"))
+		else if (importantWarningColour.equals("black"))
 		{
 			importantWarningColour = ANSI_BLACK;
 		}
-		else if (iwc.equals("red"))
+		else if (importantWarningColour.equals("red"))
 		{
 			importantWarningColour = ANSI_RED;
 		}
-		else if (iwc.equals("green"))
+		else if (importantWarningColour.equals("green"))
 		{
 			importantWarningColour = ANSI_GREEN;
 		}
-		else if (iwc.equals("yellow")) 
+		else if (importantWarningColour.equals("yellow")) 
 		{
 			importantWarningColour = ANSI_YELLOW;
 		}
-		else if (iwc.equals("blue"))
+		else if (importantWarningColour.equals("blue"))
 		{
 			importantWarningColour = ANSI_BLUE;
 		}
-		else if (iwc.equals("purple"))
+		else if (importantWarningColour.equals("purple"))
 		{
 			importantWarningColour = ANSI_PURPLE;
 		}
-		else if (iwc.equals("cyan"))
+		else if (importantWarningColour.equals("cyan"))
 		{
 			importantWarningColour = ANSI_CYAN;
 		}
-		else if (iwc.equals("white"))
+		else if (importantWarningColour.equals("white"))
 		{
 			importantWarningColour = ANSI_WHITE;
-		}
-		else 
-		{
-			importantWarningColour = ANSI_RED;
 		}
 		
 	}
@@ -388,11 +375,15 @@ public class EcoLogManager {
 			//Return back to the normal console
 			System.setOut(normal);
 			
+			this.log(LoggerCasualEnum.EcoLogger, "Successfully saved console log to: " + saveSpot);
+			
 			//Success -> returns success
 			return "Successfully save console to file";
 		} 
 		catch (Exception e)
 		{
+			this.log(LoggerCasualEnum.EcoLogger, "Successfully saved console log to: " + dir);
+			
 			//Failiure -> returns the error
 			return "Unable to save console to file: [" + e + "]";
 		}
