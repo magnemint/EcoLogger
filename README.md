@@ -71,7 +71,7 @@ to the end of the directory, the extension will be added to the name of the fold
 If for whatever reason Eco Logger is not able to save the console log to the file, it will
 spit out:
 
-`[(Project Name)] [(Time and Date of Attempt)] [Eco Logger Info] Unable to save console lot to: (directory provided by user)`
+```[(Project Name)] [(Time and Date of Attempt)] [Eco Logger Info] Unable to save console lot to: (directory provided by user)```
 
 Example Class:
 
