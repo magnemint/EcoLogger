@@ -1,4 +1,4 @@
-# Eco Logger 1.0 by Magnemint (マグネミント#3659)
+# Eco Logger 1.5 by Magnemint (マグネミント#3659)
 
 ## Description
 
@@ -71,7 +71,18 @@ to the end of the directory, the extension will be added to the name of the fold
 If for whatever reason Eco Logger is not able to save the console log to the file, it will
 spit out:
 
-```[(Project Name)] [(Time and Date of Attempt)] [Eco Logger Info] Unable to save console lot to: (directory provided by user)```
+```java
+[(Project Name)] [(Time and Date of Attempt)] [Eco Logger Info] Unable to save console lot to: (directory provided by user)
+```
+
+As of version 1.5, we now have new functions to make it easier to log info in the console!
+
+```java
+logger.info("Hello!") //This is the easiest way to log info to my beliefs.
+logger.info("This is a new type of debug method", "Bing Bong") //This is for people who want to get technical; this will print [Demo Java Project] [Tue Apr 18 21:37:18 AWST 2023] [This is a new type of debug method] Bing Bong
+	
+logger.warn("Just making sure you've starred the repo.") //The new easiest way to ~~get people to star a repo
+```
 
 Example Class:
 
