@@ -82,10 +82,10 @@ logger.info("Hello!"); //This is the easiest way to log info to my beliefs.
 logger.info("This is a new type of debug method", "Bing Bong"); //This is for people who want to get technical; this will print [Demo Java Project] [Tue Apr 18 21:37:18 AWST 2023] [This is a new type of debug method] Bing Bong
 	
 logger.warn("Just making sure you've starred the repo."); //The new easiest way to get *cough* people to star this repo *cough cough*, I- i mean to log a warning in the console
-logger.warn("DO IT!", "pwease"); //Same thing as the second logger.info function, just as a warning
+logger.warn("DO IT!", "star this repo or eat the car"); //Same thing as the second logger.info function, just as a warning
 	
 logger.alert("You haven't starred the repo... you know what this means >:)"); //The absolute most easiest way to log an error
-logger.alert("oh no", "hippity hoppity, either you star or get scarred!"); //Same as the second logger.info and logger.warn, just as an issue/alert/big red scary text
+logger.alert("oh no", "hippity hoppity, either you star or you won't get far"); //Same as the second logger.info and logger.warn, just as an issue/alert/big red scary text
 ```
 
 Example Class:
