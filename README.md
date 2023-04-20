@@ -86,6 +86,11 @@ logger.warn("DO IT!", "star this repo or eat the car"); //Same thing as the seco
 	
 logger.alert("You haven't starred the repo... you know what this means >:)"); //The absolute most easiest way to log an error
 logger.alert("oh no", "hippity hoppity, either you star or you won't get far"); //Same as the second logger.info and logger.warn, just as an issue/alert/big red scary text
+
+logger.space(); //Add a space in the console for aestethics
+logger.space(x); //Adds x spaces in the console -> x should be an int
+	
+logger.shutdown(); //Shutdown the java program while logging it in the console
 ```
 
 Example Class:
@@ -107,22 +112,43 @@ public class Main {
 		logger.logError(LoggerWarningEnum.ProjectWarning, "It appears this text would be orange.");
 		logger.logError(LoggerWarningEnum.ProjectError, "This text is red. Spooky!");
 		
-		logger.saveConsoleToFile("C://github/Eco Logger/console");
+		logger.space();
+		
+		logger.info("You can also use logger.info now!");
+		logger.info("New feature!", "There is this for nerds!");
+		logger.warn("You can also use logger.warn as well!");
+		logger.warn("Not really a warning", "Again, there is this as well if you want to get technical.");
+		logger.alert("Oh oh! You haven't starred the repository yet, have you??");
+		logger.alert("BIG NERD ALERT!", "Just star it already, please :O");
+		
+		logger.space(2);
+		
+		logger.saveConsoleToFile("C://Destiny/Eco Logger/console");
+		
+		logger.shutdown();
 	}
 }
 ```
 
 Example Class Output:
 
-`[Demo Java Project] [Tue Apr 18 21:37:15 AWST 2023] [Project Info] Project Booted`
+```java
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Project Info] Project Booted
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Other Info] This does the same thing as logger.log(), but without the fancy colours.
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Project Warning] It appears this text would be orange.
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Project Issue] This text is red. Spooky!
+	
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Project Info] You can also use logger.info now!
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [New feature!] There is this for nerds!
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Warning] You can also use logger.warn as well!
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Not really a warning] Again there is this as well if you want to get technical.
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Issue] Oh oh! You haven't starred the repository yet have you??
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [BIG NERD ALERT!] Just star it already please :O
 
-`[Demo Java Project] [Tue Apr 18 21:37:16 AWST 2023] [Other Info] This does the same thing as logger.log(), but without the fancy colours.`
 
-`[Demo Java Project] [Tue Apr 18 21:37:17 AWST 2023] [Project Warning] It appears this text would be orange.`
-
-`[Demo Java Project] [Tue Apr 18 21:37:18 AWST 2023] [Project Issue] This text is red. Spooky!`
-
-`[Demo Java Project] [Tue Apr 18 21:37:18 AWST 2023] [Eco Logger Info] Successfully saved console log to C:\github\Eco Logger\console` //Assuming no errors occured :)
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Eco Logger Info] Successfully save console log to: (dir)
+[Demo Java Project] [Thu Apr 20 09:46:40 AWST 2023] [Shutdown Call] Shutting down program
+```
 
 Accepted Colours (ANSI Colour Code):
 
